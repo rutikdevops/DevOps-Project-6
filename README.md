@@ -39,7 +39,39 @@ chown $USER /var/run/docker.sock
 git clone https://github.com/LondheShubham153/two-tier-flask-app.git
 cd two-tier-flask-app
 ```
+# Create New Docker File :-
+```bash
+Vi Dockerfile.dev
 
+```
+
+
+# Create a docker image from Dockerfile :-
+```bash
+docker build -f Dockerfile.dev -t reactapp1 .
+docker images
+```
+
+# Create Docker Container from Docker Image :-
+```bash
+docker run -it -p 3000:3000 --name reactApp reactapp1
+```
+
+# Push Docker Image to DockerHub :-
+```bash
+docker login
+# Enter username & password
+docker tag reactapp1 rutikdevops/reactapp1
+docker images
+docker push rutikdevops/reactapp1
+```
+
+# Someone pull this Docker image And deploy on his own container :-
+```bash
+docker pull rutikdevops/reactapp1
+docker images
+docker run -it -p 3000:3000 --name rutik_reactapp rutikdevops/reactapp1
+```
 
 # 3. Initialize Swarm on Swarm Master Instance :-
 - Access the "Swarm Manager" node and initiate the Swarm by running the following command:-
