@@ -20,17 +20,16 @@ Deploying a React Web App using Docker Swarm on AWS    : AWS Linux-2, t2 micro
 <br></br>
 
 
-# 1. Install and Configure the Docker on both instances :-
+# 1. Install and Configure the Docker on all the instances :-
 ```bash
 ubuntu
 sudo su
 apt update -y
 apt install docker.io -y
-hostnamectl set-hostname docker
-bash
-docker ps
-whoami
-chown $USER /var/run/docker.sock
+docker --version
+systemctl enable docker
+systemctl start docker
+systemctl status docker
 ```
 <br></br>
 
