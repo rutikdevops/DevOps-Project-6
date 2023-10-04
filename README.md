@@ -9,10 +9,10 @@
 <br></br>
 
 # Project Steps :-
-- Create 2 ec2 instance :
+- Create 3 ec2 instance :
 Deploying a React Web App using Docker Swarm on AWS    : AWS Linux-2, t2 micro
 <br></br>
-![image](https://github.com/rutikdevops/DevOps-Project-6/assets/109506158/8ebe0cd5-f321-46b4-bfb3-5e2ac6a7f984)
+![image](https://github.com/rutikdevops/DevOps-Project-6/assets/109506158/60356d92-ce3c-46e4-95eb-a8eda3900c03)
 <br></br>
 - Goto Security-> security group-> Edit inbound rules-> Add rule-> choose All Traffic
 <br></br>
@@ -33,44 +33,6 @@ systemctl status docker
 ```
 <br></br>
 
-# 2. Clone the Github code :-
-```bash
-git clone https://github.com/LondheShubham153/two-tier-flask-app.git
-cd two-tier-flask-app
-```
-# Create New Docker File :-
-```bash
-Vi Dockerfile.dev
-
-```
-
-
-# Create a docker image from Dockerfile :-
-```bash
-docker build -f Dockerfile.dev -t reactapp1 .
-docker images
-```
-
-# Create Docker Container from Docker Image :-
-```bash
-docker run -it -p 3000:3000 --name reactApp reactapp1
-```
-
-# Push Docker Image to DockerHub :-
-```bash
-docker login
-# Enter username & password
-docker tag reactapp1 rutikdevops/reactapp1
-docker images
-docker push rutikdevops/reactapp1
-```
-
-# Someone pull this Docker image And deploy on his own container :-
-```bash
-docker pull rutikdevops/reactapp1
-docker images
-docker run -it -p 3000:3000 --name rutik_reactapp rutikdevops/reactapp1
-```
 
 # 3. Initialize Swarm on Swarm Master Instance :-
 - Access the "Swarm Manager" node and initiate the Swarm by running the following command:-
@@ -86,6 +48,30 @@ docker swarm init     # This command initializes an empty Swarm.
 ```bash
 docker node ls       # This command will display information about all the nodes in the Swarm.
 ```
+
+# 2. Clone the Github code on Master :-
+```bash
+git clone https://github.com/LondheShubham153/two-tier-flask-app.git
+cd two-tier-flask-app
+```
+- Create Docker File :-
+```bash
+Vi Dockerfile1.dev
+```
+
+# Create a docker image from Dockerfile :-
+```bash
+docker build -f Dockerfile1.dev -t reactapp1 .
+docker images
+```
+
+# Create Docker Container from Docker Image :-
+```bash
+docker run -it -p 3000:3000 --name reactApp reactapp1
+```
+- Now, The React App is Running :-
+
+
 
 # 6: Create a Docker Service 🛠️
 - On the Swarm Manager node, create a Docker service using the following command:
@@ -115,6 +101,28 @@ ec2-3-111-170-216.ap-south-1.compute.amazonaws.com:3000
 ```
 ![image](https://github.com/rutikdevops/DevOps-Project-6/assets/109506158/bdef3fff-de7d-472f-be62-27b0ab034278)
 - You should be able to access your web application through this URL.
+
+
+
+# Push Docker Image to DockerHub :-
+```bash
+docker login
+# Enter username & password
+docker tag reactapp1 rutikdevops/reactapp1
+docker images
+docker push rutikdevops/reactapp1
+```
+
+# Guest User pull this Docker image And deploy it on his own Machine :-
+```bash
+docker pull rutikdevops/reactapp1
+docker images
+docker run -it -p 3000:3000 --name rutik_reactapp rutikdevops/reactapp1
+```
+
+
+
+
 
 
 
