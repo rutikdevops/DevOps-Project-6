@@ -82,14 +82,12 @@ docker run -it -p 3000:3000 --name reactApp reactapp1
 # 6: Create a Docker Service 🛠️
 - On the Swarm Manager node, create a Docker service using the following command:
 ```bash
-docker service create --name react-app-service --replicas=2 --publish 3000:3000 reactapp1
+docker service create --name react-app-service --replicas=2 --publish 3000:3000 reactapp1   # This command creates a service named "react-app-service" with three replicas, publishing port 3000.
 ```
 - Now Your App is running on Swarm-Worker Node :-
 ![image](https://github.com/rutikdevops/DevOps-Project-6/assets/109506158/9267b46c-a7ef-4851-b8a8-6c38a41d5bbc)
 
 
-- This command creates a service named "react-app-service" with three replicas, publishing port 3000.
-![image](https://github.com/rutikdevops/DevOps-Project-6/assets/109506158/40fca8db-a232-4cbe-9b37-ea77cc2f7a6a)
 
 
 
@@ -107,14 +105,6 @@ sudo docker service ls     # This will display a list of services, including the
 docker ps                 # You should see containers related to your service.
 ```
 
-# 9: Access the Web App 🌐 :-
-- Now, your web app service is running on all three nodes. To access it, grab the IP address of any of the nodes followed by port 3000, like this:
-```bash
-ec2-3-111-170-216.ap-south-1.compute.amazonaws.com:3000
-```
-![image](https://github.com/rutikdevops/DevOps-Project-6/assets/109506158/bdef3fff-de7d-472f-be62-27b0ab034278)
-- You should be able to access your web application through this URL.
-
 
 
 # Push Docker Image to DockerHub :-
@@ -125,6 +115,8 @@ docker tag reactapp1 rutikdevops/reactapp1
 docker images
 docker push rutikdevops/reactapp1
 ```
+![image](https://github.com/rutikdevops/DevOps-Project-6/assets/109506158/40fca8db-a232-4cbe-9b37-ea77cc2f7a6a)
+
 
 # Guest User pull this Docker image And deploy it on his own Machine :-
 ```bash
@@ -132,6 +124,19 @@ docker pull rutikdevops/reactapp1
 docker images
 docker run -it -p 3000:3000 --name rutik_reactapp rutikdevops/reactapp1
 ```
+
+# 9: Access the Web App 🌐 :-
+- Now, your web app service is running on all three nodes. To access it, grab the IP address of any of the nodes followed by port 3000, like this:
+```bash
+ec2-3-111-170-216.ap-south-1.compute.amazonaws.com:3000
+```
+![image](https://github.com/rutikdevops/DevOps-Project-6/assets/109506158/bdef3fff-de7d-472f-be62-27b0ab034278)
+- You should be able to access your web application through this URL.
+
+
+
+
+
 
 
 
