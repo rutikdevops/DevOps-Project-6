@@ -61,7 +61,7 @@ Vi Dockerfile1.dev
 
 # Create a docker image from Dockerfile :-
 ```bash
-docker build -f Dockerfile1.dev -t reactapp1 .
+docker build -f Dockerfile.dev -t reactapp1 .
 docker images
 ```
 
