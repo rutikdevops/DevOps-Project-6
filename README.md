@@ -71,6 +71,9 @@ docker images
 ```bash
 docker run -it -p 3000:3000 --name reactApp reactapp1
 ```
+![image](https://github.com/rutikdevops/DevOps-Project-6/assets/109506158/80b6d103-a77f-4e88-9889-83b5a68f83fc)
+
+
 - Now, The React App is Running on Swarm-Master Node :-
 ![image](https://github.com/rutikdevops/DevOps-Project-6/assets/109506158/992f95b9-deed-4776-95dc-3068e223c2fd)
 
