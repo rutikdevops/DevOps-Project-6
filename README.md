@@ -82,11 +82,15 @@ docker run -it -p 3000:3000 --name reactApp reactapp1
 # 6: Create a Docker Service 🛠️
 - On the Swarm Manager node, create a Docker service using the following command:
 ```bash
-docker service create --name react-app-service --replicas=2 --publish 3000:3000 rutikdevops/reactapp1
+docker service create --name react-app-service --replicas=2 --publish 3000:3000 reactapp1
 ```
 - This command creates a service named "react-app-service" with three replicas, publishing port 3000.
 
 ![image](https://github.com/rutikdevops/DevOps-Project-6/assets/109506158/40fca8db-a232-4cbe-9b37-ea77cc2f7a6a)
+
+- Now Your App is running on Swarm-Worker Node :-
+![image](https://github.com/rutikdevops/DevOps-Project-6/assets/109506158/9267b46c-a7ef-4851-b8a8-6c38a41d5bbc)
+
 
 # 7: List Docker Services :-
 - To list the Docker services running in the Swarm, use the following command:-
