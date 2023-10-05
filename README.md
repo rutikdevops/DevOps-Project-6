@@ -38,9 +38,11 @@ systemctl status docker
 ```bash
 docker swarm init     # This command initializes an empty Swarm.
 ```
+<br></br>
 
 # 4. Add Workers to the Swarm :-
 - After initializing the Swarm on the "swarm-master" node, a key will be generated. You need to copy and run this key on the other server (Swarm-worker). This step adds both machines as workers to the Swarm.
+<br></br>
 
 # 5. Check Swarm Node Status :-
 - To verify the status of all nodes in the Swarm, run the following command on the manager node:
@@ -48,23 +50,26 @@ docker swarm init     # This command initializes an empty Swarm.
 docker node ls       # This command will display information about all the nodes in the Swarm.
 ```
 ![image](https://github.com/rutikdevops/DevOps-Project-6/assets/109506158/192ec7c3-c027-46b3-a23c-bb02e42b0afb)
+<br></br>
 
 
 # 6. Clone the Github code on Master :-
 ```bash
-git clone https://github.com/LondheShubham153/two-tier-flask-app.git
-cd two-tier-flask-app
+git clone https://github.com/rutikdevops/DevOps-Project-6.git
+cd DevOps-Project-6
 ```
 - Create Docker File :-
 ```bash
-Vi Dockerfile1.dev
+Vi Dockerfile.dev
 ```
+<br></br>
 
 # 7. Create a docker image from Dockerfile :-
 ```bash
 docker build -f Dockerfile.dev -t reactapp1 .
 docker images
 ```
+<br></br>
 
 # 8. Create Docker Container from Docker Image :-
 ```bash
@@ -72,11 +77,9 @@ docker run -it -p 3000:3000 --name reactApp reactapp1
 ```
 ![image](https://github.com/rutikdevops/DevOps-Project-6/assets/109506158/80b6d103-a77f-4e88-9889-83b5a68f83fc)
 
-
 - Now, The React App is Running on Swarm-Master Node :-
-
 ![image](https://github.com/rutikdevops/DevOps-Project-6/assets/109506158/992f95b9-deed-4776-95dc-3068e223c2fd)
-
+<br></br>
 
 
 # 9. Create a Docker Service 🛠️
@@ -86,9 +89,7 @@ docker service create --name react-app-service --replicas=2 --publish 3000:3000 
 ```
 - Now Your App is running on Swarm-Worker Node :-
 ![image](https://github.com/rutikdevops/DevOps-Project-6/assets/109506158/9267b46c-a7ef-4851-b8a8-6c38a41d5bbc)
-
-
-
+<br></br>
 
 
 # 10. List Docker Services :-
@@ -97,14 +98,14 @@ docker service create --name react-app-service --replicas=2 --publish 3000:3000 
 sudo docker service ls     # This will display a list of services, including the one you just created.
 ```
 ![image](https://github.com/rutikdevops/DevOps-Project-6/assets/109506158/2aba5eeb-e568-4ae7-809f-3c0891a152d1)
-
+<br></br>
 
 # 11. Verify Containers :-
 - The service you created will deploy containers on the Master and worker nodes. To check if containers are running on the master node, execute:
 ```bash
 docker ps                 # You should see containers related to your service.
 ```
-
+<br></br>
 
 
 # 12. Push Docker Image to DockerHub :-
@@ -116,6 +117,7 @@ docker images
 docker push rutikdevops/reactapp1
 ```
 ![image](https://github.com/rutikdevops/DevOps-Project-6/assets/109506158/40fca8db-a232-4cbe-9b37-ea77cc2f7a6a)
+<br></br>
 
 
 # 13. Guest User pull this Docker image And deploy it on his own Machine :-
@@ -125,6 +127,7 @@ docker images
 docker run -it -p 3000:3000 --name rutik_reactapp rutikdevops/reactapp1
 ```
 ![image](https://github.com/rutikdevops/DevOps-Project-6/assets/109506158/5fc84731-a5d1-4d94-a425-9d1732c7e785)
+<br></br>
 
 
 # 14. Access the Web App 🌐 :-
