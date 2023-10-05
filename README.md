@@ -1,5 +1,6 @@
 # Deploying a React Web App using Docker Swarm on AWS
 # DevOps-Project- 6 :-
+![Push Docker Image](https://github.com/rutikdevops/DevOps-Project-6/assets/109506158/9f9f9c0c-cb02-4532-b465-b7901ef21c43)
 <br></br>
 
 # Project Blog link :-
