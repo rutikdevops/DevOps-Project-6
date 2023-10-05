@@ -48,6 +48,8 @@ docker swarm init     # This command initializes an empty Swarm.
 ```bash
 docker node ls       # This command will display information about all the nodes in the Swarm.
 ```
+![image](https://github.com/rutikdevops/DevOps-Project-6/assets/109506158/192ec7c3-c027-46b3-a23c-bb02e42b0afb)
+
 
 # 2. Clone the Github code on Master :-
 ```bash
