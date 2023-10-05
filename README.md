@@ -124,9 +124,11 @@ docker pull rutikdevops/reactapp1
 docker images
 docker run -it -p 3000:3000 --name rutik_reactapp rutikdevops/reactapp1
 ```
+![image](https://github.com/rutikdevops/DevOps-Project-6/assets/109506158/5fc84731-a5d1-4d94-a425-9d1732c7e785)
+
 
 # 9: Access the Web App 🌐 :-
-- Now, your web app service is running on all three nodes. To access it, grab the IP address of any of the nodes followed by port 3000, like this:
+- Now, your web app service is running on all three Instances. To access it, grab the IP address of any of the nodes followed by port 3000, like this:
 ```bash
 ec2-3-111-170-216.ap-south-1.compute.amazonaws.com:3000
 ```
