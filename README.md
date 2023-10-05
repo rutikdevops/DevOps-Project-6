@@ -9,8 +9,8 @@
 <br></br>
 
 # Project Steps :-
-# 1. Create 3 EC2 instance :
-Deploying a React Web App using Docker Swarm on AWS    : AWS Linux-2, t2 micro
+# 1. Create 3 EC2 instance :-
+- Deploying a React Web App using Docker Swarm on AWS    : AWS Linux-2, t2 micro
 <br></br>
 ![image](https://github.com/rutikdevops/DevOps-Project-6/assets/109506158/60356d92-ce3c-46e4-95eb-a8eda3900c03)
 <br></br>
