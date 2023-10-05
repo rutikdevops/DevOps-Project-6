@@ -78,6 +78,7 @@ docker run -it -p 3000:3000 --name reactApp reactapp1
 ![image](https://github.com/rutikdevops/DevOps-Project-6/assets/109506158/80b6d103-a77f-4e88-9889-83b5a68f83fc)
 
 - Now, The React App is Running on Swarm-Master Node :-
+<br></br>
 ![image](https://github.com/rutikdevops/DevOps-Project-6/assets/109506158/992f95b9-deed-4776-95dc-3068e223c2fd)
 <br></br>
 
@@ -88,6 +89,7 @@ docker run -it -p 3000:3000 --name reactApp reactapp1
 docker service create --name react-app-service --replicas=2 --publish 3000:3000 reactapp1   # This command creates a service named "react-app-service" with three replicas, publishing port 3000.
 ```
 - Now Your App is running on Swarm-Worker Node :-
+<br></br>
 ![image](https://github.com/rutikdevops/DevOps-Project-6/assets/109506158/9267b46c-a7ef-4851-b8a8-6c38a41d5bbc)
 <br></br>
 
@@ -120,7 +122,7 @@ docker push rutikdevops/reactapp1
 <br></br>
 
 
-# 13. Guest User pull this Docker image And deploy it on his own Machine :-
+# 13. Guest User pull this Docker Image and deploy it on his own Machine :-
 ```bash
 docker pull rutikdevops/reactapp1
 docker images
