@@ -84,12 +84,13 @@ docker run -it -p 3000:3000 --name reactApp reactapp1
 ```bash
 docker service create --name react-app-service --replicas=2 --publish 3000:3000 reactapp1
 ```
-- This command creates a service named "react-app-service" with three replicas, publishing port 3000.
-
-![image](https://github.com/rutikdevops/DevOps-Project-6/assets/109506158/40fca8db-a232-4cbe-9b37-ea77cc2f7a6a)
-
 - Now Your App is running on Swarm-Worker Node :-
 ![image](https://github.com/rutikdevops/DevOps-Project-6/assets/109506158/9267b46c-a7ef-4851-b8a8-6c38a41d5bbc)
+
+
+- This command creates a service named "react-app-service" with three replicas, publishing port 3000.
+![image](https://github.com/rutikdevops/DevOps-Project-6/assets/109506158/40fca8db-a232-4cbe-9b37-ea77cc2f7a6a)
+
 
 
 # 7: List Docker Services :-
@@ -97,6 +98,8 @@ docker service create --name react-app-service --replicas=2 --publish 3000:3000 
 ```bash
 sudo docker service ls     # This will display a list of services, including the one you just created.
 ```
+![image](https://github.com/rutikdevops/DevOps-Project-6/assets/109506158/2aba5eeb-e568-4ae7-809f-3c0891a152d1)
+
 
 # Step 8: Verify Containers :-
 - The service you created will deploy containers on the Master and worker nodes. To check if containers are running on the master node, execute:
