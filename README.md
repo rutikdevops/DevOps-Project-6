@@ -4,6 +4,7 @@
 <br></br>
 
 # Project Blog link :-
+https://medium.com/@rutikdevops/devops-project-6-3033d1eefe84
 <br></br>
 
 # Project Overview :-
