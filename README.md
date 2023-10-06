@@ -4,10 +4,11 @@
 <br></br>
 
 # Project Blog link :-
-https://medium.com/@rutikdevops/devops-project-6-3033d1eefe84
+- https://medium.com/@rutikdevops/devops-project-6-3033d1eefe84
 <br></br>
 
 # Project Overview :-
+- Containerization has revolutionized the way applications are deployed and managed, and Docker Swarm is a powerful tool for orchestrating containers in a production environment. In this step-by-step guide, we will walk you through the process of deploying a web application using Docker Swarm on AWS. By the end of this tutorial, you will have a robust and scalable setup for your web app.
 <br></br>
 
 # Project Steps :-
