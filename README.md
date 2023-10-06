@@ -144,6 +144,7 @@ ec2-3-111-170-216.ap-south-1.compute.amazonaws.com:3000
 
 # Project Reference :-
 - https://youtu.be/Dlbx15qU9zE?feature=shared
+- https://blog.prasadsuman.me/deploying-a-production-ready-web-app-using-docker-swarm-on-aws
 
 
 
